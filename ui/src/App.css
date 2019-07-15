@@ -1,0 +1,63 @@
+h2 {
+  font-size: 3.5rem;
+  color: #607348;
+  margin: 0;
+  text-align: center;
+}
+
+.loginMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type='text']
+{
+  font-size: 2rem;
+  font-family: 'Charm', cursive;
+  color: #607348;
+}
+
+.emailInput {
+  border: 0;
+  border-bottom: 3px solid #607348;
+  padding: 0 1rem; 
+}
+
+/* Chrome, Mozilla, Opera */
+::placeholder {
+  color: #607348;
+}
+
+/* Internet Explorer */
+:-ms-input-placeholder {
+  color: #607348;
+}
+
+/* Microsoft Edge */
+::-ms-input-placeholder {
+  color: #607348;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  position: absolute;
+  width: 220%;
+  z-index: -1;
+}
+
+.loginError {
+  color: red;
+}
