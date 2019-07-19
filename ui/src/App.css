@@ -66,3 +66,36 @@ input:focus {
   color: red;
 }
 /* Login Page - END */
+
+/* Home PAge - START */
+.homeMain {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.rsvpButton {
+  padding: 0.5em 3em;
+  font-size: 3em;
+  align-self: center;
+  background-color: #607348;
+}
+
+.rsvpButton:hover {
+  cursor: pointer;
+}
+
+.rsvpForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rsvpOptions {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
