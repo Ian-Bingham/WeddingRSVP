@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useGlobal } from 'reactn'
 import { Redirect } from 'react-router-dom';
 
 import whitelist from '../data/whitelist'
@@ -8,12 +8,16 @@ const Login = () => {
   const [input, setInput] = useState('')
   const [redirect, setRedirect] = useState(false)
   const [error, setError] = useState('')
+  const [user, setUser] = useGlobal('user')
 
   const onSubmit = (evt) => {
     evt.preventDefault()
 
-    if(whitelist.includes(input)) {
+    const User = whitelist.find(u => u.email === input)
+
+    if(User) {
       setError('')
+      setUser(User)
       setRedirect(true)
     } else {
       setError('Unauthorized')

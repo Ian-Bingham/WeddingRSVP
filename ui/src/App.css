@@ -30,17 +30,17 @@ h2 {
 
 input[type='text']
 {
-  font-size: 2rem;
   font-family: 'Charm', cursive;
-  color: #607348;
-  width: 100%;
-  background: transparent;
 }
 
 .emailInput {
   border: 0;
   border-bottom: 3px solid #607348;
   padding: 0 1rem; 
+  font-size: 2rem;
+  color: #607348;
+  width: 100%;
+  background: transparent;
 }
 
 /* Chrome, Mozilla, Opera */
@@ -74,12 +74,13 @@ input:focus {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
 .rsvpButton {
-  padding: 0.5em 3em;
-  font-size: 3em;
+  padding: 0.5rem 10rem;
+  font-size: 3rem;
   align-self: center;
   background-color: #607348;
 }
@@ -96,6 +97,22 @@ h3 {
 }
 
 .rsvpOptions {
-  margin-bottom: 1em;
-  font-size: 1.2em;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.rsvpOptions :last-child {
+  margin-left: 1rem;
+}
+
+.rsvpMoreInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plusOneInput, .allergyInput {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }

@@ -1,5 +1,9 @@
 const whitelist = [
-  'test@test.net'
+  {
+    email: 'test@test.net',
+    plusOne: true,
+    allergies: ['peanuts']
+  }
 ]
 
 export default whitelist
