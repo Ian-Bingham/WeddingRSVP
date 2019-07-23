@@ -58,7 +58,7 @@ input[type='text']
   color: #607348;
 }
 
-input:focus {
+input:focus, button:focus {
   outline: none;
 }
 
@@ -68,7 +68,14 @@ input:focus {
 /* Login Page - END */
 
 /* Home PAge - START */
-.homeMain {
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rsvpWrapper {
   display: flex;
   flex-direction: column;
 }
@@ -115,4 +122,12 @@ h3 {
 .plusOneInput, .allergyInput {
   font-size: 1rem;
   margin-bottom: 1rem;
+}
+
+.whereWhenWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
