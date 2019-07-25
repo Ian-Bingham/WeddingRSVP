@@ -7,7 +7,8 @@ import Login from './pages/Login'
 import Home from './pages/Home'
 
 setGlobal({
-  user: whitelist[0]
+  user: whitelist[0],
+  modalOpen: false
 })
 
 function App() {

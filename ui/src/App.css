@@ -4,6 +4,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  background-image: url('./assets/imgs/flowers.png');
+  background-position: center;
+  background-size: 75%;
+  background-repeat: no-repeat;
 }
 
 .loginWrapper {
@@ -23,7 +28,6 @@ img {
 
 h2 {
   font-size: 3.5rem;
-  color: #607348;
   margin: 0;
   text-align: center;
 }
@@ -71,12 +75,9 @@ input:focus, button:focus {
 .homeWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-}
-
-.homeWrapper > h2 {
-  margin-top: 8rem;
+  height: 100vh;
 }
 
 .rsvpWrapper {
@@ -97,8 +98,32 @@ h3 {
   margin-top: 2rem;
 }
 
-.rsvpButton:hover {
+.rsvpButton:hover, .modalCloseBtn:hover, .rsvpOptions input:hover, .rsvpSubmitBtn:hover {
   cursor: pointer;
+}
+
+.modalWrapper {
+  position: fixed;
+  border: 2px solid black;
+  text-align: center;
+  background: #fff;
+  padding: 1rem;
+  width: 45%;
+  top: 15%;
+  box-shadow: 6px 6px 5px -2px rgb(93, 91, 91);
+}
+
+.modalCloseBtn {
+  position: fixed;
+  left: 70%;
+  font-weight: bold;
+  border: none;
+  font-size: 1rem;
+  color: #607348;
+}
+
+.modalOpen {
+  background-color: #aaa;
 }
 
 .rsvpForm {

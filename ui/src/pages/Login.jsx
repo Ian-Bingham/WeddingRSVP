@@ -35,7 +35,6 @@ const Login = () => {
       <div className='loginMain'>
         { redirect ? <Redirect to='/home' /> : 
           <div className='loginWrapper'>
-            <img src={background} alt='background'/>
             <div>
               <h2>RSVP</h2>
               <form onSubmit={onSubmit}>
