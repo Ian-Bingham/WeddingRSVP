@@ -1,9 +1,10 @@
 import React, { useState, useGlobal } from 'reactn'
+import Toggle from 'react-toggle'
 
 import whitelist from '../data/whitelist';
 
 const RsvpForm = () => {
-  const [rsvpAnswer, setRsvpAnswer] = useState('no')
+  const [rsvpAnswer, setRsvpAnswer] = useState(false)
   const [user, setUser] = useGlobal('user')
   const [plusOneInput, setPlusOneInput] = useState('')
   const [allergies, setAllergies] = useState('')
@@ -15,29 +16,19 @@ const RsvpForm = () => {
   const onSubmit = (evt) => {
     evt.preventDefault()
 
-    whitelist[0].allergies = allergies;
+    console.log(rsvpAnswer)
   }
 
   return (
     <form className='rsvpForm' onSubmit={onSubmit}>
       <h3>Will you be attending the wedding?</h3>
-      <div className='rsvpOptions'>
-        <input 
-          type='radio' 
-          name='rsvp' 
-          value='no' 
-          onChange={onRsvpChange}
-          checked={rsvpAnswer === 'no'} 
-        /> No
-        <input 
-          type='radio' 
-          name='rsvp' 
-          value='yes' 
-          onChange={onRsvpChange}
-          checked={rsvpAnswer === 'yes'} 
-        /> Yes
-      </div>
-      {rsvpAnswer === 'yes' && user.plusOne ? 
+      <Toggle
+        defaultChecked={false}
+        name='rsvpAnswer'
+        value={rsvpAnswer}
+        onChange={() => setRsvpAnswer(!rsvpAnswer)}
+      />
+      {rsvpAnswer && user.plusOne ? 
         <div className='rsvpMoreInfo'>
           <input className='plusOneInput'
             type='text'

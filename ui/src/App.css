@@ -160,13 +160,8 @@ h3 {
   align-items: center;
 }
 
-.rsvpOptions {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.rsvpOptions :last-child {
-  margin-left: 1rem;
+.react-toggle {
+  margin-bottom: 16px;
 }
 
 .rsvpMoreInfo {
