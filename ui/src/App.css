@@ -220,3 +220,18 @@ h3 {
   text-align: center;
   margin-top: 3rem;
 }
+
+.whatWhenWhereWrapper > div:hover svg {
+  animation: wiggle .5s;
+}
+
+
+
+@keyframes wiggle {
+  25% {
+    transform: translate(-10px);
+  }
+  50% {
+    transform: translate(10px);
+  }
+}
