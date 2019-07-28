@@ -2,7 +2,6 @@ import React, { useState, useGlobal } from 'reactn'
 import { Redirect } from 'react-router-dom';
 
 import whitelist from '../data/whitelist'
-import background from '../assets/imgs/flowers.png'
 
 const Login = () => {
   const [input, setInput] = useState('')

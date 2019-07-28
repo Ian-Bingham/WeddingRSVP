@@ -5,9 +5,9 @@
   align-items: center;
   height: 100vh;
 
-  background-image: url('./assets/imgs/flowers.png');
+  background-image: url('./assets/imgs/loginBorder.png');
   background-position: center;
-  background-size: 75%;
+  background-size: 60%;
   background-repeat: no-repeat;
 }
 
@@ -80,6 +80,27 @@ input:focus, button:focus {
   height: 100vh;
 }
 
+.homeWrapper::before, .homeWrapper::after{
+  content: "";
+  width: 100%;
+  height: 140px;
+  background-image: url('./assets/imgs/homeBackgroundTop.png');
+  background-position: top;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: absolute;
+  z-index: -1;
+}
+
+.homeWrapper::after {
+  background-image: url('./assets/imgs/homeBackgroundBottom.png');
+  bottom: 0;
+}
+
+.content {
+  padding-top: 135px;
+}
+
 .rsvpWrapper {
   display: flex;
   flex-direction: column;
@@ -104,26 +125,32 @@ h3 {
 
 .modalWrapper {
   position: fixed;
-  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #171d01b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
   text-align: center;
   background: #fff;
   padding: 1rem;
   width: 45%;
-  top: 15%;
-  box-shadow: 6px 6px 5px -2px rgb(93, 91, 91);
+  box-shadow: 6px 8px 5px -2px rgba(0, 0, 0, 0.41);
+  position: relative;
 }
 
 .modalCloseBtn {
-  position: fixed;
-  left: 70%;
   font-weight: bold;
   border: none;
   font-size: 1rem;
   color: #607348;
-}
-
-.modalOpen {
-  background-color: #aaa;
+  position: absolute;
+  right: 20px;
 }
 
 .rsvpForm {

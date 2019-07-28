@@ -5,9 +5,11 @@ const Modal = (props) => {
 
   return (
     <div className='modalWrapper'>
-      <button className='modalCloseBtn' onClick={() => setModalOpen(false)}>X</button>
-      <div className='modalBody'>
-        {props.children}
+      <div className='modalContent'>
+        <button className='modalCloseBtn' onClick={() => setModalOpen(false)}>X</button>
+        <div className='modalBody'>
+          {props.children}
+        </div>
       </div>
     </div>
   )

@@ -11,25 +11,27 @@ const Home = () => {
 
   return (
     <div className={modalOpen ? 'homeWrapper modalOpen' : 'homeWrapper'}>
-      <h2>Welcome, {user.email}</h2>
-      <button className='rsvpButton' onClick={() => setModalOpen(true)}>RSVP Now</button>
-      {modalOpen ? 
-        <Modal>
-          <RsvpForm /> 
-        </Modal> 
-      : null}
-      <div className='whatWhenWhereWrapper'>
-        <div className='whenInfo'>
-          <FontAwesomeIcon icon={faClock} size='3x' color='#607348' />
-          <p>July 18, 2020</p>
-        </div>
-        <div className='whatInfo'>
-          <FontAwesomeIcon icon={faQuestion} size='3x' color='#607348' />
-          <p>Food, Family, Activities</p>
-        </div>
-        <div className='whereInfo'>
-          <FontAwesomeIcon icon={faMapMarkedAlt} size='3x' color='#607348' />
-          <p>Dallas, OR</p>
+      <div className='content'>
+        <h2>Welcome, {user.email}</h2>
+        <button className='rsvpButton' onClick={() => setModalOpen(true)}>RSVP Now</button>
+        {modalOpen ? 
+          <Modal>
+            <RsvpForm /> 
+          </Modal> 
+        : null}
+        <div className='whatWhenWhereWrapper'>
+          <div className='whenInfo'>
+            <FontAwesomeIcon icon={faClock} size='3x' color='#607348' />
+            <p>July 18, 2020</p>
+          </div>
+          <div className='whatInfo'>
+            <FontAwesomeIcon icon={faQuestion} size='3x' color='#607348' />
+            <p>Food, Family, Activities</p>
+          </div>
+          <div className='whereInfo'>
+            <FontAwesomeIcon icon={faMapMarkedAlt} size='3x' color='#607348' />
+            <p>Dallas, OR</p>
+          </div>
         </div>
       </div>
     </div>
