@@ -11,7 +11,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-toggle": "^4.0.2",
-    "reactn": "^2.1.6"
+    "reactn": "^2.1.6",
+    "semantic-ui-react": "^0.87.3"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,15 +1,21 @@
 body, html, #root {
   margin: 0;
-  font-family: 'Charm', cursive;
+  /* font-family: 'Charm', cursive; */
+  font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   min-height: 100vh;
   color: #607348;
+  font-size: 1em;
 }
 
 button {
-  font-family: 'Charm', cursive;
+  /* font-family: 'Charm', cursive; */
+}
+
+p {
+    margin: .5em 0;
 }
 
 /* code {

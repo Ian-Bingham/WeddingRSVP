@@ -1,6 +1,7 @@
 import React, { useState, useGlobal } from 'reactn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faMapMarkedAlt, faQuestion } from '@fortawesome/free-solid-svg-icons'
+import { Button } from 'semantic-ui-react'
 
 import RsvpForm from '../components/RsvpForm';
 import Modal from '../components/Modal';
@@ -13,7 +14,7 @@ const Home = () => {
     <div className={modalOpen ? 'homeWrapper modalOpen' : 'homeWrapper'}>
       <div className='content'>
         <h2>Welcome, {user.email}</h2>
-        <button className='rsvpButton' onClick={() => setModalOpen(true)}>RSVP Now</button>
+        <Button className='rsvpButton' onClick={() => setModalOpen(true)}><h3>RSVP Now</h3></Button>
         {modalOpen ? 
           <Modal>
             <RsvpForm /> 

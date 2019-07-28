@@ -1,5 +1,6 @@
 import React, { useState, useGlobal } from 'reactn'
 import Toggle from 'react-toggle'
+import { Input, Button } from 'semantic-ui-react'
 
 import whitelist from '../data/whitelist';
 
@@ -30,13 +31,13 @@ const RsvpForm = () => {
       />
       {rsvpAnswer && user.plusOne ? 
         <div className='rsvpMoreInfo'>
-          <input className='plusOneInput'
+          <Input className='plusOneInput'
             type='text'
             placeholder='Email for Plus One'
             value={plusOneInput}
             onChange={(evt) => setPlusOneInput(evt.target.value)}
           />
-          <input className='allergyInput'
+          <Input className='allergyInput'
             type='text'
             placeholder='Food allergies'
             value={allergies}
@@ -44,7 +45,7 @@ const RsvpForm = () => {
           />
         </div>
       : null}
-      <input className='rsvpSubmitBtn' type='submit' value='Submit'/>
+      <Button className='rsvpSubmitBtn' type='submit'>Submit</Button>
     </form>
   )
 }

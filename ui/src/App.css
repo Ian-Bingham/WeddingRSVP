@@ -1,14 +1,14 @@
 /* Login Page - START */
 .loginMain {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background-image: url('./assets/imgs/bottom.svg');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 57%;
+  background-color: #607348;
   height: 100vh;
-
-  background-image: url('./assets/imgs/loginBorder.png');
-  background-position: center;
-  background-size: 60%;
-  background-repeat: no-repeat;
 }
 
 .loginWrapper {
@@ -18,32 +18,47 @@
   justify-content: center;
   align-items: center;
   max-width: 45%;
+  margin: 150px;
 }
 
-img {
-  position: absolute;
-  width: 220%;
-  z-index: -1;
+.loginWrapper img {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 30vw;
+  max-height: 50vh;
 }
 
-h2 {
+.loginWrapper > div,  .modalContent {
+  background: #fff;
+  border-radius: 10px;
+  height: 50vh;
+  min-height: 300px;
+  padding: 10px;
+  box-shadow: 4px 4px 4px;
+  min-width: 50vw;
+}
+
+.loginWrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginWrapper .ui.input input[type=submit] {
+  text-align: center
+}
+
+h2, h2:first-child {
   font-size: 3.5rem;
-  margin: 0;
   text-align: center;
-}
-
-input[type='text']
-{
-  font-family: 'Charm', cursive;
+  margin: 3rem 0;
 }
 
 .emailInput {
   border: 0;
-  border-bottom: 3px solid #607348;
-  padding: 0 1rem; 
   font-size: 2rem;
-  color: #607348;
   width: 100%;
+  margin: 10px 0;
   background: transparent;
 }
 
@@ -78,27 +93,36 @@ input:focus, button:focus {
   justify-content: start;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
-.homeWrapper::before, .homeWrapper::after{
+.homeWrapper::before, .homeWrapper::after {
   content: "";
-  width: 100%;
-  height: 140px;
-  background-image: url('./assets/imgs/homeBackgroundTop.png');
-  background-position: top;
+  height: 40vw;
+  width: 40vw;
+  max-width: 400px;
+  background-image: url('./assets/imgs/flowers-one.svg');
   background-size: contain;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   position: absolute;
+  left: 20px;
+  top: 20px;
   z-index: -1;
 }
 
-.homeWrapper::after {
+.homeWrapper::after{
+  background-image: url('./assets/imgs/flowers-two.svg');
+  right: 20px;
+  left: auto;
+} 
+
+/* .homeWrapper::after {
   background-image: url('./assets/imgs/homeBackgroundBottom.png');
   bottom: 0;
-}
+} */
 
 .content {
-  padding-top: 135px;
+  padding-top: 25vh;
 }
 
 .rsvpWrapper {
@@ -117,6 +141,7 @@ h3 {
   align-self: center;
   background-color: #607348;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .rsvpButton:hover, .modalCloseBtn:hover, .rsvpOptions input:hover, .rsvpSubmitBtn:hover {
@@ -129,10 +154,14 @@ h3 {
   width: 100%;
   left: 0;
   top: 0;
-  background: #171d01b5;
+  background: #6073488c;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.modalBody {
+  height: 100%;
 }
 
 .modalContent {
@@ -140,28 +169,35 @@ h3 {
   background: #fff;
   padding: 1rem;
   width: 45%;
-  box-shadow: 6px 8px 5px -2px rgba(0, 0, 0, 0.41);
+  box-shadow: none;
+  /* box-shadow: 6px 8px 5px -2px rgba(0, 0, 0, 0.41); */
   position: relative;
 }
 
 .modalCloseBtn {
   font-weight: bold;
   border: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #607348;
   position: absolute;
   right: 20px;
 }
 
+.rsvpForm .react-toggle--focus .react-toggle-thumb {
+  box-shadow: none;
+}
+
 .rsvpForm {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .react-toggle {
-  margin-bottom: 16px;
+  margin: 24px;
+  transform: scale(3.5);
 }
 
 .rsvpMoreInfo {
@@ -178,7 +214,7 @@ h3 {
 
 .whatWhenWhereWrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   text-align: center;

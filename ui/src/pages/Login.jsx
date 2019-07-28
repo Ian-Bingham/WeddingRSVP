@@ -1,6 +1,8 @@
 import React, { useState, useGlobal } from 'reactn'
 import { Redirect } from 'react-router-dom';
+import { Input } from 'semantic-ui-react'
 
+import wedding from '../assets/imgs/wedding-ppl.svg'
 import whitelist from '../data/whitelist'
 
 const Login = () => {
@@ -37,13 +39,13 @@ const Login = () => {
             <div>
               <h2>RSVP</h2>
               <form onSubmit={onSubmit}>
-                <input className='emailInput'
+                <Input className='emailInput'
                   type='text'
                   placeholder='Enter your email'
                   value={input}
                   onChange={onChange}
                 />
-                <input 
+                <Input 
                   type='submit' 
                   value='Submit' 
                   hidden={true}
@@ -51,6 +53,7 @@ const Login = () => {
               </form>
               { error ? <div className='loginError'>{error}</div> : null }
             </div>
+            <img src={wedding}/>
           </div>     
         }
       </div>
