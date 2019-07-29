@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { setGlobal } from 'reactn';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './ReactToggle.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+setGlobal({
+  user: null,
+  modalOpen: false
+})
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

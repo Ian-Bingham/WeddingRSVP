@@ -2,8 +2,6 @@ import React, { useState, useGlobal } from 'reactn'
 import Toggle from 'react-toggle'
 import { Input, Button } from 'semantic-ui-react'
 
-import whitelist from '../data/whitelist';
-
 const RsvpForm = () => {
   const [rsvpAnswer, setRsvpAnswer] = useState(false)
   const [user, setUser] = useGlobal('user')
