@@ -6,7 +6,7 @@ const User = require('../models/User');
 const router = Router();
 
 // Create User
-router.post('/', [ check(['email', 'hasPlusOne']).exists() ], async (req, res) => {
+router.post('/create', [ check(['email', 'hasPlusOne']).exists() ], async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(422).send({ errors: errors.array() });
@@ -29,7 +29,7 @@ router.post('/', [ check(['email', 'hasPlusOne']).exists() ], async (req, res) =
       return res.send(user);
     }
     else {
-      return res.sendStatus(400)
+      return res.status(400).send({ error: 'User already exsists' })
     }
   } catch(err) {
     return res.sendStatus(500);
@@ -38,7 +38,7 @@ router.post('/', [ check(['email', 'hasPlusOne']).exists() ], async (req, res) =
 });
 
 // Get User
-router.get('/', [ check(['email']).exists() ], async (req, res) => {
+router.post('/get', [ check(['email']).exists() ], async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(422).send({ errors: errors.array() });
@@ -51,7 +51,7 @@ router.get('/', [ check(['email']).exists() ], async (req, res) => {
   if(user) {
     return res.send(user);
   } else {
-    return res.sendStatus(404);
+    return res.status(401).send({error: 'Unauthorized'});
   }
 
 });

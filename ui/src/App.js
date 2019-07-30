@@ -12,7 +12,7 @@ function App() {
 
   return (
     <Router>
-      <Route exact path='/' exact component={Login} />
+      <Route exact path='/' component={Login} />
       <Route path='/home' render={() => (
         user === null ? <Redirect to='/' />
          : <Home />

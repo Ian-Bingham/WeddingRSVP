@@ -1,34 +1,32 @@
 import React, { useState, useGlobal } from 'reactn'
 import { Redirect } from 'react-router-dom';
 import { Input } from 'semantic-ui-react'
+import axios from 'axios'
 
 import wedding from '../assets/imgs/wedding-ppl.svg'
-import whitelist from '../data/whitelist'
 
 const Login = () => {
   const [input, setInput] = useState('')
   const [redirect, setRedirect] = useState(false)
-  const [error, setError] = useState('')
+  const [error, setError] = useState(null)
   const [user, setUser] = useGlobal('user')
 
-  const onSubmit = (evt) => {
+  const baseUrl = 'http://localhost:4000'
+
+  const onSubmit = async (evt) => {
     evt.preventDefault()
 
-    const User = whitelist.find(u => u.email === input)
+    try {
+      const res = await axios.post(`${baseUrl}/user/get`, {
+        email: input
+      })
 
-    if(User) {
-      setError('')
-      setUser(User)
+      setUser(res.data)
       setRedirect(true)
-    } else {
-      setError('Unauthorized')
+    } catch(err) {
+      setError(err.response.data.error)
       setRedirect(false)
     }
-  }
-
-  const onChange = (evt) => {
-    setInput(evt.target.value)
-    setError('')
   }
 
   return (
@@ -43,7 +41,7 @@ const Login = () => {
                   type='text'
                   placeholder='Enter your email'
                   value={input}
-                  onChange={onChange}
+                  onChange={(evt) => { setInput(evt.target.value) }}
                 />
                 <Input 
                   type='submit' 
