@@ -3,8 +3,10 @@ const mongoose = require('mongoose');
 const userSchema = mongoose.Schema({
   email: String,
   isGoing: Boolean,
-  foodAllergies: String,
   hasPlusOne: Boolean,
+  plusOneGoing: Boolean,
+  numChildren: Number,
+  foodAllergies: String,
 }, {
   timestamps: true,
 });

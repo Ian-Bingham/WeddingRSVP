@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const connectDatabase = () => {
-  mongoose.connect('mongodb://localhost:27017/WeddingRsvp', {
+  mongoose.connect('mongodb://localhost:27017/WeddingRsvp', ({
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
-  });
+  }));
 
   console.log('Connected to database...');
 

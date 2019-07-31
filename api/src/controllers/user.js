@@ -20,9 +20,11 @@ router.post('/create', [ check(['email', 'hasPlusOne']).exists() ], async (req, 
     if(!user) {
       const user = new User({
         email: email,
-        isGoing: null,
+        isGoing: false,
+        hasPlusOne: hasPlusOne,
+        plusOneGoing: false,
+        numChildren: 0,
         foodAllergies: '',
-        hasPlusOne: hasPlusOne
       })
 
       await user.save();

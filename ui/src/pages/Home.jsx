@@ -14,7 +14,9 @@ const Home = () => {
     <div className={modalOpen ? 'homeWrapper modalOpen' : 'homeWrapper'}>
       <div className='content'>
         <h2>Welcome, {user.email}</h2>
-        <Button className='rsvpButton' onClick={() => setModalOpen(true)}><h3>RSVP Now</h3></Button>
+        <Button className='rsvpButton' onClick={() => setModalOpen(true)}>
+          <h3>{user.isGoing === null ? 'RSVP Now' : 'Edit RSVP'}</h3>
+        </Button>
         {modalOpen ? 
           <Modal>
             <RsvpForm /> 

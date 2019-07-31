@@ -207,6 +207,19 @@ h3 {
   align-items: center;
 }
 
+label .ui.input input,
+.ui.selection.dropdown {
+  margin-left: .5em;
+}
+
+label {
+  margin-bottom: 2em;
+}
+
+.ui.selection.dropdown {
+  min-width: initial;
+}
+
 .plusOneInput, .allergyInput {
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -224,8 +237,6 @@ h3 {
 .whatWhenWhereWrapper > div:hover svg {
   animation: wiggle .5s;
 }
-
-
 
 @keyframes wiggle {
   25% {
