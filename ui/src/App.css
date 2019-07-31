@@ -86,7 +86,9 @@ input:focus, button:focus {
 }
 /* Login Page - END */
 
-/* Home PAge - START */
+
+
+/* Home Page - START */
 .homeWrapper {
   display: flex;
   flex-direction: column;
@@ -114,15 +116,11 @@ input:focus, button:focus {
   background-image: url('./assets/imgs/flowers-two.svg');
   right: 20px;
   left: auto;
-} 
-
-/* .homeWrapper::after {
-  background-image: url('./assets/imgs/homeBackgroundBottom.png');
-  bottom: 0;
-} */
+}
 
 .content {
   padding-top: 25vh;
+  width: 65%;
 }
 
 .rsvpWrapper {
@@ -148,6 +146,7 @@ h3 {
   cursor: pointer;
 }
 
+/* Modal */
 .modalWrapper {
   position: fixed;
   height: 100%;
@@ -183,6 +182,7 @@ h3 {
   right: 20px;
 }
 
+/* Rsvp Form */
 .rsvpForm .react-toggle--focus .react-toggle-thumb {
   box-shadow: none;
 }
@@ -225,6 +225,7 @@ label {
   margin-bottom: 1rem;
 }
 
+/* Icons */
 .whatWhenWhereWrapper {
   display: flex;
   justify-content: space-between;
@@ -245,4 +246,47 @@ label {
   50% {
     transform: translate(10px);
   }
+}
+
+
+/* Schedule */
+.sectionHeader {
+  text-align: center;
+  margin: 100px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scheduleInner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.scheduleInner > div:nth-child(odd) {
+    align-self: flex-end;
+}
+
+.scheduleInner > div {
+    width: 48%;
+    background: #e0e1e2;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.scheduleInner > div:hover {
+  background: #cacbcd;
+}
+
+.scheduleInner:after {
+    content: '';
+    height: 80%;
+    width: 2px;
+    background: #607348;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
