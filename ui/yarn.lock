@@ -5828,6 +5828,11 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
+jump.js@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.1.tgz#0de2b1631ba9a1c2c6b8572ad277d877e8503600"
+  integrity sha1-DeKxYxupocLGuFcq0nfYd+hQNgA=
+
 keyboard-key@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/keyboard-key/-/keyboard-key-1.0.4.tgz#52d8fa07b7e17757072aa22a67fb4ae85e4c46b0"
@@ -8156,6 +8161,14 @@ react-scripts@3.0.1:
     workbox-webpack-plugin "4.2.0"
   optionalDependencies:
     fsevents "2.0.6"
+
+react-scrollable-anchor@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/react-scrollable-anchor/-/react-scrollable-anchor-0.6.1.tgz#fd6e78026c744f76414053d06903b82adccb54d9"
+  integrity sha1-/W54Amx0T3ZBQFPQaQO4KtzLVNk=
+  dependencies:
+    jump.js "1.0.1"
+    prop-types "^15.5.10"
 
 react-toggle@^4.0.2:
   version "4.0.2"
