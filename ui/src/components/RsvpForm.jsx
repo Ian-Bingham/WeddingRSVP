@@ -44,7 +44,10 @@ const RsvpForm = () => {
 
       setUser(res2.data)
       setSubmitted(true)
-      setTimeout(() => {setModalOpen(false)}, 1500)
+      setTimeout(() => {
+        setModalOpen(false)
+        setSubmitted(false)
+      }, 1500)
     } catch (err) {
       setError(err.response.data.error)
       setSubmitted(false)
