@@ -258,35 +258,63 @@ label {
   align-items: center;
 }
 
-.scheduleInner {
+.sectionInner {
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.scheduleInner > div:nth-child(odd) {
-    align-self: flex-end;
+.sectionInner > div:nth-child(odd) {
+  align-self: flex-end;
 }
 
-.scheduleInner > div {
-    width: 48%;
-    background: #e0e1e2;
-    padding: 10px;
-    border-radius: 8px;
+.scheduleWrapper .sectionInner > div,
+.whatWrapper .sectionInner > div > div,
+.whereWrapper .sectionInner > div {
+  width: 48%;
+  background: #e0e1e2;
+  padding: 10px;
+  border-radius: 8px;
 }
 
-.scheduleInner > div:hover {
+.scheduleWrapper .sectionInner > div:hover,
+.whatWrapper .sectionInner > div > div:hover,
+.whereWrapper .sectionInner > div:hover {
   background: #cacbcd;
 }
 
-.scheduleInner:after {
-    content: '';
-    height: 80%;
-    width: 2px;
-    background: #607348;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+/* What */
+.whatWrapper .sectionInner > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.whatWrapper .sectionInner > div:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.whatWrapper img {
+  width: 50%;
+}
+
+.scheduleWrapper .sectionInner:after {
+  content: '';
+  height: 80%;
+  width: 2px;
+  background: #607348;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* When */
+.whereWrapper {
+  margin-bottom: 200px;
+}
+
+.whereWrapper .sectionInner > div {
+  width: 100%;
 }
