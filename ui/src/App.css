@@ -9,6 +9,7 @@
   background-size: 57%;
   background-color: #607348;
   height: 100vh;
+  font-size: 1.1em;
 }
 
 .loginWrapper {
@@ -130,7 +131,11 @@ input:focus, button:focus {
 
 h3 {
   font-size: 1.5rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
+}
+
+ul, p {
+    font-size: 20px;
 }
 
 .rsvpButton {
@@ -259,6 +264,10 @@ label {
   align-items: center;
 }
 
+.sectionHeader svg {
+  height: 1.5em;
+}
+
 .sectionInner {
   width: 100%;
   display: flex;
@@ -275,7 +284,7 @@ label {
 .whereWrapper .sectionInner > div {
   width: 48%;
   background: #e0e1e2;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
 }
 
@@ -289,7 +298,7 @@ label {
 .whatWrapper .sectionInner > div {
   display: flex;
   justify-content: space-between;
-  margin: 15px 0;
+  margin: 10vh 0;
 }
 
 .whatWrapper .sectionInner > div:nth-child(odd) {
@@ -338,4 +347,64 @@ label {
 #foo > div:first-child,
 #foo > div:first-child:hover {
   background: white;
+}
+
+.joystick {
+	transform-origin: 53% 53%;
+	animation: rotate 3s infinite;
+}
+
+#stars {
+	transform-origin: center;
+	animation: shine 2s infinite;
+}
+
+#heart {
+	transform-origin: center;
+	animation: heart 2s infinite;
+}
+
+#heart .cls-3{fill: none;stroke:#000;stroke-miterlimit:10;stroke-width:9px}
+#heart .cls-4{fill: #f9d0ca}
+
+#stars .cls-1{fill: #f8cc54}
+#stars .cls-2{fill: #dae2ef}
+#stars .cls-3{fill: #c9d3e2}
+#stars .cls-4{fill: #f9d375}
+#stars .cls-10{fill: #d6d6d6}
+
+#JoyWrapper .cls-1{fill: #d3d3d3}
+#JoyWrapper .cls-3{fill: #3d3d3d}
+#JoyWrapper .cls-4{fill: #9b4e4e}
+#JoyWrapper .cls-5{fill: #ad5757}
+
+#Food .cls-1{fill:#f8cc54}
+#Food .cls-2{fill:#dae2ef}
+#Food .cls-3{fill:#c9d3e2}
+#Food .cls-4{fill:#f9d375}
+#Food .cls-10{fill:#d6d6d6}
+    
+svg {
+  width: 50% !important;
+}
+
+@keyframes shine {
+	50% {
+		opacity: .5;
+	}
+}
+
+@keyframes heart {
+	50% {
+		transform: scale(.95);
+	}
+}
+
+@keyframes rotate {
+	25% {
+		transform: rotate(4deg);
+	}
+	50% {
+		transform: rotate(-4deg);
+	}
 }

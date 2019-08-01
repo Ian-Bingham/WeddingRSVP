@@ -12,6 +12,9 @@ import activities from '../assets/imgs/activities.svg'
 import expect from '../assets/imgs/expect.svg'
 import foodDrinks from '../assets/imgs/food-drinks.svg'
 import Slideshow from '../components/Slideshow';
+import Heart from '../components/Heart';
+import FoodDrinks from '../components/FoodDrinks';
+import Joystick from '../components/Joystick';
 
 const Home = () => {
   const [modalOpen, setModalOpen] = useGlobal('modalOpen')
@@ -92,21 +95,21 @@ const Home = () => {
             </span>
             <div className='sectionInner'>
               <div>
-                <img src={expect} />
+                <Heart />
                 <Info
                   header='What to Expect'
                   info='A celebration of love and joining of two families. Although we love children we feel this event is more suitable for adults only.'
                 />
               </div>
               <div>
-                <img src={foodDrinks} />
+                <FoodDrinks />
                 <Info
                   header='Food and Drinks'
                   info='Food: Horderves of many varieties will be served. Drinks: There will be an array of drinks available, including tea, lemon aid, mimosas and more!'
                 />
               </div>
               <div>
-                <img src={activities} />
+                <Joystick />
                 <Info
                   header='Activities'
                   info='While you are enjoying the company of family members old and new you can enjoy the following activites we have set up for you! Giant connect 4, a craft station, photobooth, arcade tetris, live music.'
