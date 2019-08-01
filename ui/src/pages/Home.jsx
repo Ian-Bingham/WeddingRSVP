@@ -10,8 +10,8 @@ import Schedule from '../components/Schedule';
 import Info from '../components/Info';
 import activities from '../assets/imgs/activities.svg'
 import expect from '../assets/imgs/expect.svg'
-import wear from '../assets/imgs/wear.svg'
 import foodDrinks from '../assets/imgs/food-drinks.svg'
+import Slideshow from '../components/Slideshow';
 
 const Home = () => {
   const [modalOpen, setModalOpen] = useGlobal('modalOpen')
@@ -112,8 +112,8 @@ const Home = () => {
                   info='While you are enjoying the company of family members old and new you can enjoy the following activites we have set up for you! Giant connect 4, a craft station, photobooth, arcade tetris, live music.'
                 />
               </div>
-              <div>
-                <img src={wear} />
+              <div id='foo'>
+                <Slideshow />
                 <Info
                   header='What to Wear'
                   info='Our dress code is summer evening wear. The event will be outdoors so breathable clothes and comfortable shoes are recomended. We have a recommended color pallet to choose from that will complement the decor and create unified and harmonious pictures.'

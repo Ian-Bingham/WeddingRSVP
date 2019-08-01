@@ -319,3 +319,23 @@ label {
 .whereWrapper .sectionInner > div {
   width: 100%;
 }
+
+
+
+
+
+
+.each-fade, .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.image-container img {
+  width: 600px
+}
+
+#foo > div:first-child,
+#foo > div:first-child:hover {
+  background: white;
+}
